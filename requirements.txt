@@ -1,0 +1,12 @@
+python-dotenv
+unstructured[all-docs]
+chromadb
+tiktoken
+langchain
+langchain-community
+langchain-openai
+langchain-groq
+poppler-utils
+streamlit
+pytesseract
+poppler
