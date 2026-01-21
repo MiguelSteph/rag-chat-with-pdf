@@ -12,7 +12,7 @@ The main steps to handle the PDF files are highlighted in the diagram below:
 
 ![handle img](img/upload-flow.drawio.svg)
 
-We start by using [unstructured]() to extract and chunk the text, tables, and images from the PDF files. I used the [`by_title`](https://docs.unstructured.io/api-reference/legacy-api/partition/chunking#”by-title”-chunking-strategy) chunking strategy in order to preserve the section boundaries. And to avoid having too many granular text chunks, I set `chunk_combine_text_under_n_chars` to `2_000`, so small text chunks will be combined.
+We start by using [unstructured](https://docs.unstructured.io/open-source/core-functionality/partitioning) to extract and chunk the text, tables, and images from the PDF files. I used the [`by_title`](https://docs.unstructured.io/api-reference/legacy-api/partition/chunking#”by-title”-chunking-strategy) chunking strategy in order to preserve the section boundaries. And to avoid having too many granular text chunks, I set `chunk_combine_text_under_n_chars` to `2_000`, so small text chunks will be combined.
 
 ```python
   elements = partition_pdf(file=file,
